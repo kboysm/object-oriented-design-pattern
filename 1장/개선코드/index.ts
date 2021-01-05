@@ -1,6 +1,7 @@
 interface ScreenUi {
         show:void;
         handleBtn1Click:void;
+        handleBtn2Click:void;
 }
 
 class Menu1ScreenUi implements ScreenUi {
