@@ -2,6 +2,9 @@ window.onload = () => {
     const menu1 = document.getElementById('menuBtn1');
     const menu2 = document.getElementById('menuBtn2');
     const publicBtn1 = document.getElementById('publicBtn1');
+    // 사용자 요구로 추가
+    const publicBtn2 = document.getElementById('publicBtn2');
+
     let currentMenu = null;
     const changeUiToMenu1 = () => {
         document.getElementById('selectedMenu').innerHTML= "menu1";
@@ -20,7 +23,14 @@ window.onload = () => {
     const processBtn1WhenMenu2 = () => {
         document.getElementById('selectedMenu').innerHTML= "menu2,btn1";
     }
+    //사용자 요구로 추가
+    const processBtn2WhenMenu1 = () => {
+        document.getElementById('selectedMenu').innerHTML= "menu1,btn2";
+    }
 
+    const processBtn2WhenMenu2 = () => {
+        document.getElementById('selectedMenu').innerHTML= "menu2,btn2";
+    }
 
     const BtnClicked = (el) => {
         if(el === 'menuBtn1'){
@@ -35,6 +45,15 @@ window.onload = () => {
                 processBtn1WhenMenu1()
             }else if (currentMenu === 'menu2'){
                 processBtn1WhenMenu2()
+            }
+        }
+        // 추가되는 부분
+        else if (el === 'publicBtn2'){
+            if(currentMenu === null) return;
+            if(currentMenu === 'menu1'){
+                processBtn2WhenMenu1()
+            }else if (currentMenu === 'menu2'){
+                processBtn2WhenMenu2()
             }
         }
     }
@@ -57,6 +76,10 @@ window.onload = () => {
     }
     publicBtn1.onclick = () => {
         BtnClicked('publicBtn1');
+    }
+    //사용자의 요구로 추가
+    publicBtn2.onclick = () => {
+        BtnClicked('publicBtn2');
     }
 
     document.getElementById('descriptionArea').innerHTML = descripttion;

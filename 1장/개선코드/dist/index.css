@@ -1,0 +1,51 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 1300px;
+    height: 800px;
+    border: 1px solid black;
+}
+
+.sideBar{
+    display: flex;
+    flex-direction: column;
+    border:1px solid black;
+    height: 800px;
+    width: 200px;
+    padding: 10px;
+}
+
+.sideBar Button {
+    margin-top: 10px;
+}
+
+.motherBox{
+    display: flex;
+    flex-direction: column;
+    border:1px solid black;
+    height: 800px;
+    width: 600px;
+}
+.publicBtn{
+    width:600px;
+    height: 400px;
+    text-align: center;
+}
+
+.publicBtn Button {
+    margin-top: 20px;
+}
+
+.screenArea{
+    border-top: 1px solid black;
+    width:600px;
+    height: 400px;
+    color:darkkhaki;
+    text-align: center;
+}
+
+/* .descriptionArea{
+    width: 400px;
+    height: 800px;
+    border-top: 1px solid black;
+} */
